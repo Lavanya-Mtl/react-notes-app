@@ -5,9 +5,100 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
+  
+}
+html {
+  background: url('./paper.jpeg') no-repeat bottom fixed;
+  background-size: cover;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+button {
+  padding: 10px;
+  background-color:rgb(192, 178, 252);
+  background-image: -webkit-linear-gradient(white,cadetblue);
+  margin: 5px;
+  border-radius: 10px;
+  border-color: aliceblue;
+  font-size: 1em;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  /*grid-template-columns: 1fr 1fr;*/
+}
+li {
+  
+  margin: 10px;
+  padding: 15px;
+  background-image: url('./notepaper.jpeg');
+  background-size: 100% 100%;
+    align-items: stretch;
+}
+.application {
+  width:80%;
+  margin: auto;
+}
+
+.SearchDiv {
+  width:80%;
+  margin: auto;
+  padding: 10px;
+  /*background-color: rgb(57, 124, 127);*/
+  background: linear-gradient(to bottom right,white,cadetblue);
+  font-size: 1em;
+}
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  
+}
+
+.newNote {
+  width:80%;
+  margin: auto;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+.title {
+  font-size: 2em;
+}
+.content {
+  font-size: 1.5em;
+}
+.checkbox {
+  text-align: right;
+ 
+  width: unset;
+}
+input.bigCheck {
+  width:20px;
+  height: 20px;
+  border-color: white;
+  
+}
+.cont {
+    padding: 5px;
+}
+.btn-group{
+  text-align: center;
+}
+
+.NoteCreator{
+  background-image: url('./notepaper.jpeg');
+  background-size: 100% 100%;
+}
+h1 {
+  text-align: center;
 }
