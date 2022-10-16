@@ -44,7 +44,7 @@ function Note(props) {
             <div className='title cont'>{props.title}</div>
             <div className='content cont'>{props.content}</div>
             <div className='lastModified cont'>Last Modified at {props.lastModified}</div>
-            <div>{props.isArchived ? 'archived': 'notArchive'}</div>
+            
             <div className="btn-group">
                 <button onClick={()=>{props.delete(props.id)}}>Delete</button>
                 
@@ -76,7 +76,7 @@ function NoteList(props) {
     else if(props.showMode==='all'){
         n=props.Notes;
     }
-    
+
     return (
     <ul>
         {
