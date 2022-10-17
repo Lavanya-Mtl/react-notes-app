@@ -68,19 +68,22 @@ function Note(props) {
 function NoteList(props) {
     let n;
     if(props.showMode==='current') {
-        n=props.Notes.filter((note)=>note.isArchived===false);
+        n=props.Notes.filter((note)=>JSON.parse(note).isArchived===false);
     }
     else if(props.showMode==='archives') {
-        n=props.Notes.filter((note)=>note.isArchived===true);
+        n=props.Notes.filter((note)=>JSON.parse(note).isArchived===true);
     }
     else if(props.showMode==='all'){
         n=props.Notes;
     }
-
+    if(props.searchString!=='')
+    {n = n.filter((filtered) =>JSON.parse(filtered).title.toLowerCase().includes(props.searchString.toLowerCase()) ||
+    JSON.parse(filtered).content.toLowerCase().includes(props.searchString.toLowerCase()))}
     return (
     <ul>
         {
-          n.map((note)=>{
+          n.map((stringyNote)=>{
+            let note=JSON.parse(stringyNote);
             return(
               <Note id={note.id}
                 title={note.title}
